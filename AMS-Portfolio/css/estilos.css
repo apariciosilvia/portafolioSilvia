@@ -1,0 +1,361 @@
+body {
+    background: linear-gradient(135deg, #e0adb97c, #ec8d7dc9);
+}
+
+html, body {
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    max-width: 100%;
+}
+
+#texto {
+    color: #ff4b2b;
+}
+
+/* Hero Section */
+#inicio {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 5rem 2rem;
+    background: linear-gradient(to bottom, rgb(37, 34, 34), rgba(58, 51, 51, 0.842), rgba(255, 255, 255, 0));
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.05);
+}
+
+/* Sección Contacto */
+.input-focus:focus {
+    border-color: #ff416c;
+    box-shadow: 0 0 10px rgba(255, 65, 108, 0.3);
+}
+
+.contact-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Tarjetas de proyectos */
+.project-card {
+    transition: transform 0.3s ease;
+    margin-bottom: 10%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjetas de proyectos con imagen de fondo */
+.project-card {
+    height: 300px;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: background 0.3s ease;
+}
+
+.project-card:hover::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+#sobre-mi {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+#contacto {
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+.enlaces {
+    text-decoration: none;
+    color: #ff4b2b;
+    margin-right: 10px;
+}
+
+.leer {
+    --color: #fdfdfdc5;
+    --color2: srgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+}
+
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    padding: 0.7rem 1rem;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* From Uiverse.io by vinodjangid07 */ 
+/* The switch - the box around the speaker*/
+.toggleSwitch {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(39, 39, 39, 0);
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    overflow: hidden;
+  }
+  
+  /* Hide default HTML checkbox */
+  #checkboxInput {
+    display: none;
+  }
+  
+  .bell {
+    width: 18px;
+  }
+  
+  .bell path {
+    fill: white;
+  }
+  
+  .speaker {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition-duration: .3s;
+  }
+  
+  .speaker svg {
+    width: 18px;
+  }
+  
+  .mute-speaker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 3;
+    transition-duration: .3s;
+  }
+  
+  .mute-speaker svg {
+    width: 18px;
+  }
+  
+  #checkboxInput:checked +.toggleSwitch .speaker {
+    opacity: 0;
+    transition-duration: .3s;
+  }
+  
+  #checkboxInput:checked +.toggleSwitch .mute-speaker {
+    opacity: 1;
+    transition-duration: .3s;
+  }
+  
+  #checkboxInput:active + .toggleSwitch {
+    transform: scale(0.7);
+  }
+  
+  #checkboxInput:hover + .toggleSwitch {
+    color: rgb(112, 63, 63);
+  }
+
+
+
+@media (max-width: 768px) {
+    #inicio {
+        height: 100vh;
+        /* Mantiene el 100% en pantallas pequeñas */
+        padding: 3rem 1rem;
+        /* Reduce el padding en móviles */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #inicio h1 {
+        font-size: 2rem;
+        /* Reduce el tamaño del título en móviles */
+    }
+
+    #inicio p {
+        font-size: 1.1rem;
+    }
+
+    .navbar {
+        background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        max-width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        /* Asegura que esté por encima del contenido */
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+        padding: 5px 10px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        color: white;
+        display: block;
+    }
+
+    .btn-gradient {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    
+    #botonmenu{
+        border: none;
+    }
+
+   /* From Uiverse.io by MopokD71304 */ 
+.nav_bar {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    display: flex;
+    transition: 0.4s;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 15px;
+    border-radius: 15px;
+    width: 10px;
+    
+    
+  }
+  
+  .bar1 {
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    margin-bottom: 15px;
+    transition: 0.4s;
+    height: 2px;
+  }
+  
+  .bar2 {
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    position: absolute;
+    transition: 0.4s;
+    height: 2px;
+  }
+  
+  .bar3_h {
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    transition: 0.4s;
+    height: 2px;
+  }
+  
+  .bar4 {
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    margin-top: 15px;
+    transition: 0.4s;
+    height: 2px;
+  }
+  
+  .nav_bar:hover {
+    border-radius: 50px;
+  }
+  .nav_bar:hover .bar3_h {
+    transform: rotate(-45deg);
+  }
+  .nav_bar:hover .bar2 {
+    transform: rotate(45deg);
+  }
+  
+  .nav_bar:hover .bar1 {
+    opacity: 0;
+    width: 30px;
+  }
+  .nav_bar:hover .bar4 {
+    opacity: 0;
+    width: 30px;
+  }
+  
+}
