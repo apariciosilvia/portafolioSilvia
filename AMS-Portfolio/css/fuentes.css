@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Perfectly';
+    src: url('../fonts/Perfectly\ Vintages\ Font\ by\ Keithzo.otf');
+}
+
+#titulo-animacion {
+    font-family: 'Perfectly';
+}
+
+
+@font-face {
+    font-family: 'AppleGaramond';
+    src: url('../fonts/AppleGaramond.ttf');
+}
+
+body {
+    font-family: 'AppleGaramond' !important;
+    font-size: 22px !important;
+}
